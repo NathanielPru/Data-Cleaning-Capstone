@@ -8,22 +8,24 @@ date: "2023-03-28"
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## R Markdown
+## Column Transformations
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+Columns in the original data were removed to only include means and standard deviations. Variables were made more readable in English and given descriptive names. Finally, both a column for the subjects of the experiments and the specific activity were added to the data. The activities were given a readable name. The variables after the transformation are:
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
-
-```{r cars}
-summary(cars)
+```{r run_analysis}
+colnames(fullx)
 ```
 
-## Including Plots
+## Combining Train and Test Data
 
-You can also embed plots, for example:
+After this process was performed on the training data, it was performed on the test data. Finally, the data was merged into a single dataframe including all observations
 
-```{r pressure, echo=FALSE}
-plot(pressure)
+## Creating Tidy Means by Subject and Activity
+
+Finally, using apply() and some fore loops I created a dataframe that had a summary of the means for every variable for a single subject and a summary of every variable for a single activity. These were given unique identifiers of the subject or the activity for the observations. Finally it was exported as a .txt file named "tidy.txt"
+
+The variable names are:
+
+```{r run_analysis}
+colnames(temp)
 ```
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
