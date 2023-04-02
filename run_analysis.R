@@ -1,5 +1,3 @@
-getwd()
-setwd("C:/Users/gfdas/OneDrive/Desktop/Data Science/R Projects/JHU---Data-Science-Cert/ProgrammingAssignment3/Data-Cleaning-Capstone")
 
 library(dplyr)
 
