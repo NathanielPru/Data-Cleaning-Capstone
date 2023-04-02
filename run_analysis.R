@@ -140,4 +140,4 @@ for (i in 1:36){
 }
 
 #export the data
-write.table(temp,file = "tidy.txt")
+write.table(temp,file = "tidy.txt",row.names = FALSE)
